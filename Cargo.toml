@@ -1,0 +1,15 @@
+[package]
+name = "blake3unity"
+version = "0.1.0"
+authors = ["BigOyayubi <55793780+BigOyayubi@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+blake3 = { git = "https://github.com/BLAKE3-team/BLAKE3.git" }
+libc = "0.2.66"
+
+[lib]
+name = "blake3unity"
+crate-type = ["dylib"]
+
+
