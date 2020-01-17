@@ -40,6 +40,7 @@ pub extern fn update_blake3(
 }
 
 // finalize hash calculating then put result into output.
+#[no_mangle]
 pub extern fn finalize_blake3(
   hasher: *mut blake3::Hasher,
   out_size: libc::size_t,
