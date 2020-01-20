@@ -31,8 +31,8 @@ for TARGET in ${TARGETS[@]}
 do
   cargo build --release --target=${TARGET}
   case "${TARGET}" in
-    aarch64-linux-android*)   DST=Plugins/${PLATFORM}/arm64-v8a/lib${LIBNAME}.so;;
-    armv7-linux-androideabi*) DST=Plugins/${PLATFORM}/armeabi-v7a/lib${LIBNAME}.so;;
+    aarch64-linux-android*)   DST=Plugins/${PLATFORM}/libs/arm64-v8a/lib${LIBNAME}.so;;
+    armv7-linux-androideabi*) DST=Plugins/${PLATFORM}/libs/armeabi-v7a/lib${LIBNAME}.so;;
   esac
   mkdir -p "$(dirname ${DST})"
   cp target/${TARGET}/release/lib${LIBNAME}.so ${DST}
