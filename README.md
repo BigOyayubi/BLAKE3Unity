@@ -40,7 +40,4 @@ using(var hasher = Hasher.Create()){
 
 * Windows Support
 * Stream IF(C#)
-* IntPtr IF(C#)
-* Span<T>   IF(C#)
-* Memory <T> IF(C#)
-
+* (DONE)IntPtr IF(C#)
