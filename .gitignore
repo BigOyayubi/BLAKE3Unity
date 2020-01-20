@@ -19,3 +19,5 @@ unity-sample/Temp/
 
 # temporary forlder
 Plugins/
+NDK/
+.cargo/

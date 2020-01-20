@@ -12,3 +12,4 @@ libc = "0.2.66"
 name = "blake3unity"
 crate-type = ["staticlib", "cdylib"]
 
+
