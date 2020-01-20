@@ -43,5 +43,5 @@ using(var hasher = Hasher.Create()){
 
 # TODO
 
-* Windows Support
+* (DONE)Windows Support
 * (DONE)IntPtr IF(C#)
