@@ -39,5 +39,4 @@ using(var hasher = Hasher.Create()){
 # TODO
 
 * Windows Support
-* Stream IF(C#)
 * (DONE)IntPtr IF(C#)
