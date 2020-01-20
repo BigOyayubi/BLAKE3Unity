@@ -1,6 +1,6 @@
 # BLAKE3Unity
 
-BLAKE3 Unity native plugin based od Rust.
+BLAKE3 Unity native plugin based on Rust.
 
 BLAKE3 is crasy fast cryptographics hash function.
 
