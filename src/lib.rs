@@ -12,6 +12,16 @@ pub extern fn calculate_blake3(
   let output= unsafe { std::slice::from_raw_parts_mut(out_pointer as *mut u8, out_size as usize) };
   impl_calculate_blake3(input, output);
 }
+#[no_mangle]
+pub extern fn calculate_unsafe_blake3(
+  in_size: libc::size_t,
+  in_pointer: *const u8,
+  out_size: libc::size_t, 
+  out_pointer: *mut u8)
+{
+    calculate_blake3( in_size, in_pointer, out_size, out_pointer ) 
+}
+
 
 // create blake3 hasher
 #[no_mangle]
@@ -39,6 +49,15 @@ pub extern fn update_blake3(
   impl_update_blake3(hasher, input);
 }
 
+#[no_mangle]
+pub extern fn update_unsafe_blake3(
+  hasher: *mut blake3::Hasher,
+  in_size: libc::size_t,
+  in_pointer: *const u8)
+{
+    update_blake3(hasher, in_size, in_pointer)
+}
+
 // finalize hash calculating then put result into output.
 #[no_mangle]
 pub extern fn finalize_blake3(
@@ -50,6 +69,14 @@ pub extern fn finalize_blake3(
   impl_finalize_blake3(hasher, output)
 }
 
+#[no_mangle]
+pub extern fn finalize_unsafe_blake3(
+  hasher: *mut blake3::Hasher,
+  out_size: libc::size_t,
+  out_pointer: *mut u8)
+{
+    finalize_blake3(hasher, out_size, out_pointer)
+}
 
 // implementation calculate_blake3
 fn impl_calculate_blake3(input: &[u8], output: &mut [u8]) {
