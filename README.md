@@ -1,10 +1,15 @@
 # BLAKE3Unity
 
-simple BLAKE3 bindings for Unity3d.
+BLAKE3 Unity native plugin based od Rust.
 
 BLAKE3 is crasy fast cryptographics hash function.
 
 see https://github.com/BLAKE3-team/BLAKE3
+
+# Requirements
+
+* Rust
+   * https://www.rust-lang.org/
 
 # Install
 
