@@ -13,4 +13,6 @@ jobs:
       run: sh make_macOS.sh
     - name: Build-iOS
       run: sh make_iOS.sh
+    - name: Build-Android
+      run: ANDROID_NDK_ROOT=$ANDROID_SDK_ROOT/ndk-bundle && sh make_android.sh
 
