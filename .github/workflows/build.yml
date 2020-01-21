@@ -11,3 +11,6 @@ jobs:
     - uses: actions/checkout@master
     - name: Build-macOS
       run: sh make_macOS.sh
+    - name: Build-iOS
+      run: sh make_iOS.sh
+
