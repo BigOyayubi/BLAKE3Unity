@@ -4,12 +4,9 @@ on: [push]
 
 jobs:
   build:
-
     runs-on: macOS-latest
-
+    
     steps:
-    - uses: actions/checkout@v1
-    - name: Install Dependencies
-      run: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -y
+    - uses: hecrj/setup-rust-action@v1
     - name: Build-macOS
       run: sh make_macOS.sh
