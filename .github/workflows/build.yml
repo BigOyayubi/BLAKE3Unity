@@ -17,8 +17,8 @@ jobs:
       env: 
         ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk-bundle
       run: |
-        ls $ANDROID_NDK_ROOT/
-        ls $ANDROID_NDK_ROOT/build/
-        ls $ANDROID_NDK_ROOT/build/tools/
+        ls /usr/local/lib/android/sdk/ndk-bundle/
+        ls /usr/local/lib/android/sdk/ndk-bundle/build/
+        ls /usr/local/lib/android/sdk/ndk-bundle/build/tools/
         sh make_android.sh
 
