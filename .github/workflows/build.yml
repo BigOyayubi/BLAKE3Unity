@@ -38,7 +38,8 @@ jobs:
     - uses: hecrj/setup-rust-action@v1
     - uses: actions/checkout@master
     - name: Build-Windows
-      run: powershell .¥make_win.ps1
+      run: make_win.ps1
+      shell: pwsh
     - name: Commit-Plugins
       run: |
         git config --local user.email "55793780+BigOyayubi@users.noreply.github.com"
