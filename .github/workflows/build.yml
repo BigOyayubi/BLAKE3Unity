@@ -8,5 +8,6 @@ jobs:
     
     steps:
     - uses: hecrj/setup-rust-action@v1
+    - uses: actions/checkout@master
     - name: Build-macOS
       run: sh make_macOS.sh
