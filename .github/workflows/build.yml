@@ -14,11 +14,10 @@ jobs:
     - name: Build-iOS
       run: sh make_iOS.sh
     - name: Build-Android
-      env: 
-        ANDROID_NDK_ROOT: /usr/local/lib/android/sdk/ndk-bundle
       run: |
-        ls /usr/local/lib/android/sdk/ndk-bundle/
-        ls /usr/local/lib/android/sdk/ndk-bundle/build/
-        ls /usr/local/lib/android/sdk/ndk-bundle/build/tools/
+        export ANDROID_NDK_ROOT=$ANDROID_HOME/ndk-bundle
+        ls $ANDROID_HOME/ndk-bundle/
+        ls $ANDROID_HOME/ndk-bundle/build/
+        ls $ANDROID_HOME/ndk-bundle/build/tools/
         sh make_android.sh
 
