@@ -22,5 +22,13 @@ jobs:
         sh make_android.sh
     - name: Show-Result
       run: ls -la Plugins/*
-    
-
+    - name: Commit-Plugins
+      run: |
+        git config --local user.email "55793780+BigOyayubi@users.noreply.github.com"
+        git config --local user.name "BigOyayubi"
+        git add Plugins/*
+        git commit -m "Update Plugins"
+    - name: Push Plugins
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}      
