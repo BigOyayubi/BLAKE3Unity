@@ -20,4 +20,7 @@ jobs:
         ls $ANDROID_HOME/ndk-bundle/build/
         ls $ANDROID_HOME/ndk-bundle/build/tools/
         sh make_android.sh
+    - name: Show-Result
+      run: ls -la Plugins/*
+    
 
